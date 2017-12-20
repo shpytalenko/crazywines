@@ -1,20 +1,58 @@
-<%= simple_form_for(@wine) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :title %>
-    <%= f.input :critics_score %>
-    <%= f.input :average_user_rating %>
-    <%= f.input :food_suggestion %>
-    <%= f.input :wine_style %>
-    <%= f.input :awards %>
-    <%= f.input :notes %>
-    <%= f.association :producer %>
-    <%= f.association :region %>
-    <%= f.input :extra %>
+<%= form_for @wine, :html => { :class => 'form-horizontal form-model' } do |f| %>
+  <div class="form-group">
+    <%= f.label :title, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :title, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :critics_score, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :critics_score, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :average_user_rating, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :average_user_rating, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :food_suggestion, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :food_suggestion, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :wine_style, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_field :wine_style, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :awards, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :awards, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :notes, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :notes, :class => 'text-field form-control' %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :extra, :class => 'control-label col-md-2' %>
+    <div class="col-md-10">
+      <%= f.text_area :extra, :class => 'text-field form-control' %>
+    </div>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+  <div class="form-group">
+    <div class='col-md-offset-2 col-md-10'>
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                  wines_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 <% end %>
