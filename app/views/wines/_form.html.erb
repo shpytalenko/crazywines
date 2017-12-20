@@ -1,0 +1,20 @@
+<%= simple_form_for(@wine) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title %>
+    <%= f.input :critics_score %>
+    <%= f.input :average_user_rating %>
+    <%= f.input :food_suggestion %>
+    <%= f.input :wine_style %>
+    <%= f.input :awards %>
+    <%= f.input :notes %>
+    <%= f.association :producer %>
+    <%= f.association :region %>
+    <%= f.input :extra %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @wine.title %>
+</p>
+
+<p>
+  <strong>Critics score:</strong>
+  <%= @wine.critics_score %>
+</p>
+
+<p>
+  <strong>Average user rating:</strong>
+  <%= @wine.average_user_rating %>
+</p>
+
+<p>
+  <strong>Food suggestion:</strong>
+  <%= @wine.food_suggestion %>
+</p>
+
+<p>
+  <strong>Wine style:</strong>
+  <%= @wine.wine_style %>
+</p>
+
+<p>
+  <strong>Awards:</strong>
+  <%= @wine.awards %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @wine.notes %>
+</p>
+
+<p>
+  <strong>Producer:</strong>
+  <%= @wine.producer %>
+</p>
+
+<p>
+  <strong>Region:</strong>
+  <%= @wine.region %>
+</p>
+
+<p>
+  <strong>Extra:</strong>
+  <%= @wine.extra %>
+</p>
+
+<%= link_to 'Edit', edit_wine_path(@wine) %> |
+<%= link_to 'Back', wines_path %>
